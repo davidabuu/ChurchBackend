@@ -7,7 +7,7 @@ namespace ChurchWebApp.Data
     public class ApiDbContext :IdentityDbContext
     {
 
-        public DbSet<EventForm> Events { get; set; }
+        public DbSet<Event> Events { get; set; }
         public ApiDbContext(DbContextOptions<ApiDbContext> options): base(options) { 
         }
     }

@@ -19,6 +19,7 @@ namespace ChurchWebApp.Controllers
         {
             _context = context;
         }
+        [AllowAnonymous]
         [HttpGet]
         [Route("GetAllEvents")]
         public async Task<IActionResult> Get()
@@ -27,7 +28,7 @@ namespace ChurchWebApp.Controllers
         }
 
         [HttpPost]
-        [Route("Add New Event")]
+        [Route("AddNewEvent")]
        public async Task<IActionResult> AddNewEvent(Event newEvent){
             _context.Events.Add(newEvent);
 
@@ -36,7 +37,7 @@ namespace ChurchWebApp.Controllers
         
         }
         [HttpDelete]
-        [Route("Delete an Event")]
+        [Route("DeleteAnEvent")]
         public async Task<IActionResult> DeleteEvent(int id)
         {
             var singleEvent =await _context.Events.FirstOrDefaultAsync(x => x.Id == id);

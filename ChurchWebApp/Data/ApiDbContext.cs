@@ -8,6 +8,8 @@ namespace ChurchWebApp.Data
     {
 
         public DbSet<Event> Events { get; set; }
+
+        public DbSet<MembersRegistration> Members { get; set; }
         public ApiDbContext(DbContextOptions<ApiDbContext> options): base(options) { 
         }
     }

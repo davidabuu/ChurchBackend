@@ -3,6 +3,7 @@ using System;
 using ChurchWebApp.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ChurchWebApp.Migrations
 {
     [DbContext(typeof(ApiDbContext))]
-    partial class ApiDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231117203511_Members Registerss")]
+    partial class MembersRegisterss
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.13");
@@ -81,10 +84,6 @@ namespace ChurchWebApp.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Sex")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("TnxRef")
                         .IsRequired()
                         .HasColumnType("TEXT");
 

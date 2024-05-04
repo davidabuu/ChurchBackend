@@ -18,5 +18,7 @@ namespace ChurchWebApp.Model
         public string? EventTime { get; set; }
         [Required]
         public string? EventLocation { get; set; }
+
+        public string? EventDescription { get; set; }   
     }
 }
